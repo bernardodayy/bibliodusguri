@@ -1,0 +1,88 @@
+/* Rolagem suave ao clicar nos links do menu */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f5fa;
+  color: #1f1c2e;
+}
+
+header {
+  background: #8b2d91;
+  color: white;
+  padding: 16px 24px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+nav a {
+  color: white;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.caixa {
+  background: white;
+  border: 1px solid #e0deea;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 8px;
+  margin: 4px 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background: #8b2d91;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #e0deea;
+}
+
+select {
+  padding: 8px;
+  margin: 4px 0 10px;
+}
+
+td button {
+  padding: 5px 8px;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.atrasado {
+  background: #fbe5e3;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}

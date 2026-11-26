@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIBLIODUSGURI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📚 BIBLIODUSGURI</h1>
+    <nav>
+      <a href="#cadastro">Cadastrar</a>
+      <a href="#resumo-caixa">Resumo</a>
+      <a href="#livros">Livros</a>
+      <a href="#ranking-caixa">Ranking</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="caixa" id="cadastro">
+      <h2>Cadastrar livro</h2>
+      <form id="form-cadastro">
+        <label for="titulo">Título</label>
+        <input id="titulo" type="text">
+
+        <label for="autor">Autor</label>
+        <input id="autor" type="text">
+
+        <label for="ano">Ano</label>
+        <input id="ano" type="number">
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+
+    <div class="caixa" id="resumo-caixa">
+      <h2>Resumo</h2>
+      <p id="resumo"></p>
+    </div>
+
+    <div class="caixa" id="livros">
+      <h2>Livros</h2>
+
+      <label for="busca">Pesquisar</label>
+      <input id="busca" type="text" placeholder="Título ou autor">
+
+      <label for="filtro">Mostrar</label>
+      <select id="filtro">
+        <option value="todos">Todos</option>
+        <option value="disponiveis">Disponíveis</option>
+        <option value="atrasados">Atrasados</option>
+      </select>
+
+      <table>
+        <thead>
+          <tr><th>Título</th><th>Autor</th><th>Ano</th><th>Situação</th><th>Ações</th></tr>
+        </thead>
+        <tbody id="tabela"></tbody>
+      </table>
+    </div>
+
+    <div class="caixa" id="ranking-caixa">
+      <h2>Ranking</h2>
+      <ol id="ranking"></ol>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
