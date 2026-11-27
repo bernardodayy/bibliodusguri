@@ -64,6 +64,13 @@ function situacao(livro) {
   return "Emprestado até " + formatarData(dataDevolucao(livro)) + " (" + livro.emprestadoPara + ")";
 }
 
+// Cor da situação: verde (disponível), amarelo (emprestado) ou vermelho (atrasado)
+function corSituacao(livro) {
+  if (!livro.emprestadoPara) return "verde";
+  if (estaAtrasado(livro)) return "vermelho";
+  return "amarelo";
+}
+
 function anoValido(ano) {
   let anoAtual = new Date().getFullYear();
   return Number.isInteger(ano) && ano >= 1 && ano <= anoAtual;
@@ -113,7 +120,7 @@ function mostrarLivros() {
       "<td>" + escaparHTML(livro.titulo) + "</td>" +
       "<td>" + escaparHTML(livro.autor) + "</td>" +
       "<td>" + livro.ano + "</td>" +
-      "<td>" + escaparHTML(situacao(livro)) + "</td>" +
+      "<td><span class='" + corSituacao(livro) + "'>" + escaparHTML(situacao(livro)) + "</span></td>" +
       "<td>" + botaoEmprestimo +
       " <button onclick='editar(" + i + ")'>Editar</button>" +
       " <button onclick='remover(" + i + ")'>Remover</button></td>" +
