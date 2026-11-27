@@ -253,11 +253,10 @@ function mostrarResumo() {
   let emprestados = livros.filter((livro) => livro.emprestadoPara).length;
   let atrasados = livros.filter((livro) => estaAtrasado(livro)).length;
 
-  document.getElementById("resumo").textContent =
-    "Total: " + livros.length +
-    " | Disponíveis: " + (livros.length - emprestados) +
-    " | Emprestados: " + emprestados +
-    " | Atrasados: " + atrasados;
+  document.getElementById("total").textContent = livros.length;
+  document.getElementById("disponiveis").textContent = livros.length - emprestados;
+  document.getElementById("emprestados").textContent = emprestados;
+  document.getElementById("atrasados").textContent = atrasados;
 }
 
 // ---------- 11: RANKING ----------
